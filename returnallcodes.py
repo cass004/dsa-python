@@ -1,7 +1,7 @@
 def getchar(value):
     if value <= 0 or value > 26:
         return ''
-    return chr(value + 96)  # 1 -> 'a', 2 -> 'b', ..., 26 -> 'z'
+    return chr(value + 96)  
 
 def returnallcodes(input):
     if input == '':
@@ -9,14 +9,14 @@ def returnallcodes(input):
 
     mainans = []
 
-    # --- 1-digit decoding ---
+    
     singledigit = int(input[0:1])
     if 1 <= singledigit <= 9:
         answithoutfirstdigit = returnallcodes(input[1:])
         for eachans in answithoutfirstdigit:
             mainans.append(getchar(singledigit) + eachans)
 
-    # --- 2-digit decoding ---
+    
     if len(input) >= 2:
         doubledigit = int(input[0:2])
         if 10 <= doubledigit <= 26:

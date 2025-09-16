@@ -10,3 +10,8 @@ def length_of_LL(head):
 new_head = take_input()
 len_of_list = length_of_LL(new_head)
 print(len_of_list)
+
+def length_of_LL_recursive(head):
+    if head is None:
+        return 0
+    return 1 + length_of_LL_recursive(head.next)
